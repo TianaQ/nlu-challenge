@@ -15,8 +15,8 @@
 > could you play some classic please   
 
 The topic of speech recognition approaches is pretty new to me so my understanding of the matter is limited, but I think that the following issues may occur when adding new entities to the grammar:  
-1. Adding entities to a rule may lead to the possibility of accidentally generating utterances that were not expected in a particular case and may be confused with the utterances specific to some other case that would affect the accuracy of the model. That may be avoided by separating different types of utterances in accordance with their common patterns of extension (like imperative and “wishful” sentences). Or even into separate grammars for separate cases with different priorities.  
-2. Adding new rules to handle the complexity of separate rules may lead to the large volume of a grammar file, which to some extent can be handled through imports.  
+1. Adding entities to a rule may lead to the possibility of accidentally generating utterances that were not expected in a particular case and may be confused with the utterances specific to some other case that would affect the accuracy of the model. That may be avoided by separating different types of utterances in accordance with their common patterns of extension (like imperative and “wishful” sentences). Or even by creating separate grammars for separate cases with different priorities.  
+2. Adding new rules to handle the complexity of separate rules may lead to the large volume of a grammar file, which to some extent can be handled through imports and multiple grammar files.  
 3. Also grammars need to explicitly include possible outcomes and can’t reserve a space in the rule for “some input” between specific entities. I assume that this may be handled with preprocessing of the input.    
   
 
