@@ -1,0 +1,63 @@
+#JSGF V1.0 utf-8 ru;
+
+/**
+  * Linguistics Challenge for Russian NLU Consultant position
+  * by Tatiana Kurilo
+  * 2021-03-15
+  *
+  * Task 2
+  *
+  */
+
+grammar music_play;
+
+
+public <music_play> =
+	(<musicCommand> | <musicIntent>) [<somethingOf>] ([<album>] [группы] <artist> [<album>]| [песню] <song> [<artist>]| <genre>) [пожалуйста];
+
+
+// action rules
+
+<musicCommand> =
+	(поставь | включи) [пожалуйста];  // may be expanded with plural polite forms if necessary 
+
+<musicIntent> = 
+	[я | мы] (хочу | хотим | хотел бы | хотели бы) послушать;
+
+<somethingOf> = 
+	что-нибудь из | 
+	что-то из |
+	какой-нибудь |
+	какую-нибудь;
+
+
+// music object rules 
+
+<artist> =
+	(битлз | битлс | битлов) |  
+	(radio head | радиохэд) | 
+	(cake | кейк | кэйк) | 
+	(pink floyd | пинк флойд); 
+
+<song> =
+	(comfortably numb | камфортабли нам | камфортабли намб) |
+	(paranoid android | параноид андроид) |
+	(let it be | лет ит би) |
+	(hey jude | хей джуд | хэй джуд);
+
+<genre> = 
+	<genreAcc> | <genreGen>;
+
+<genreAcc> =
+	jazz | джаз | джазовую музыку |
+	rock | рок [музыку] |
+	pop | поп [музыку] |
+	metal | метал |
+	классику | классическую музыку;
+
+<genreGen> =
+	джаза | рока | поп-музыки | метала | (классики | классической музыки) ;
+
+<album> = 
+	(ummagumma | уммагумма | умагума | умагуму) |
+	(let it be | лет ит би);

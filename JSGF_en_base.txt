@@ -1,0 +1,28 @@
+#JSGF V1.0 utf-8 en;
+grammar music_play;
+
+public <music_play> =
+	[can you] (play | put on) (<artist> | <song>);
+
+<artist> =
+	beatles |
+	radio head |
+	cake |
+	pink floyd;
+
+<song> =
+	confortably numb |
+	paranoid android |
+	let it be |
+	hey jude;
+
+
+/** Examples
+  *
+  * [can you play]<unk> [beatles]<artist>
+  * [can you put on]<unk> [paranoid android]<song>
+
+  * [i want to listen to]<unk> [jazz]<genre> [music]<unk>
+  * [play me]<unk> [ummagumma]<album> [by]<unk> [pink floyd]<artist>
+  */
+
