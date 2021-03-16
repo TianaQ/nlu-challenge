@@ -13,7 +13,7 @@ grammar music_play;
 
 
 public <music_play> =
-	(<musicCommand> | <musicIntent>) [<somethingOf>] ([<album>] [группы] <artist> [<album>]| [песню] <song> [<artist>]| <genre>) [пожалуйста];
+	(<musicCommand> | <musicIntent>) [<somethingOf>] <musicObject> [пожалуйста];
 
 
 // action rules
@@ -32,6 +32,12 @@ public <music_play> =
 
 
 // music object rules 
+
+<musicObject> = [<album>] [группы] <artist> [<album>] | 
+	<album> |
+	[песню] <song> [<artist>] | 
+	[some] <genre> [music] |
+	<genre>;
 
 <artist> =
 	(битлз | битлс | битлов) |  
