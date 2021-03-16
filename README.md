@@ -15,7 +15,7 @@
 > could you play some classic please   
 
 The topic of speech recognition approaches is pretty new to me so my understanding of the matter is limited, but I think that the following issues may occur when adding new entities to the grammar:  
-1. Adding entities to a rule may lead to the possibility of accidentally generating utterances that were not expected in a particular case and may be confused with the utterances specific to some other case that would affect the accuracy of the model. That may be avoided by separating different types of utterances in accordance with their common patterns of extension (like imperative and “wishful” sentences).   
+1. Adding entities to a rule may lead to the possibility of accidentally generating utterances that were not expected in a particular case and may be confused with the utterances specific to some other case that would affect the accuracy of the model. That may be avoided by separating different types of utterances in accordance with their common patterns of extension (like imperative and “wishful” sentences). Or even into separate grammars for separate cases with different priorities.  
 2. Adding new rules to handle the complexity of separate rules may lead to the large volume of a grammar file, which to some extent can be handled through imports.  
 3. Also grammars need to explicitly include possible outcomes and can’t reserve a space in the rule for “some input” between specific entities. I assume that this may be handled with preprocessing of the input.    
   
@@ -39,7 +39,7 @@ The topic of speech recognition approaches is pretty new to me so my understandi
 
 In this task I had to proceed with a lot of assumptions as I couldn't find an example of a JSGF file for Russian to use as a reference.  
 1. The input format is unknown, so I assumed that it may be a mix of cyrillic and latin characters because utf-8 encoding allows that.   
-2. However if the input is cyrillic only, then the names of music entities also should be adapted. I also assume that they may be processed separately and automatically.  
+2. However if the input is cyrillic only, then the English names of music entities also should be adapted. I also assume that they may be processed separately and automatically to build a dictionary of suitable Russian equivalents.  
 3. It also may be useful to take into account how original names in English tend to change in Russian informal speech, for example acquiring endings in accordance with Russian cases.  
 4. Also I assumed that no preprocessing was applied to the input so possible word forms should be included in grammar rules for coverage.  
 
