@@ -23,9 +23,7 @@ public <music_play> =
 
 
 <musicIntent> = 
-	[i | we] (want | would like | d like) to (listen [to]| hear); 
-
-	// based on the input format may be changed to: [i | we | i'd | we'd] (want | [would] like) to (listen [to]| hear);
+	[i | we | i'd | we'd] (want | [would] like) to (listen [to]| hear);
 
 
 <musicObject> = [<album> by] <artist> | 

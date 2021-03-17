@@ -2,9 +2,9 @@
 
 ### Task 1: extending the English grammar
  
-[JSGF file](https://github.com/TianaQ/nlu-challenge/blob/master/JSGF_en_ext.txt)
+[JSGF text file](https://github.com/TianaQ/nlu-challenge/blob/master/JSGF_en_ext.txt), [test script in Python](https://github.com/TianaQ/nlu-challenge/blob/master/test.py)  
 
-##### Examples covered by extended grammar:  
+##### Examples covered by the extended grammar:  
 
 > can you play beatles   
 > can you put on paranoid android   
@@ -22,9 +22,9 @@ The topic of speech recognition approaches is pretty new to me so my understandi
 
 ### Task 2: localizing the JSGF grammar in Russian
 
-[JSGF file](https://github.com/TianaQ/nlu-challenge/blob/master/JSGF_ru_ext.txt)
+[JSGF text file](https://github.com/TianaQ/nlu-challenge/blob/master/JSGF_ru_ext.txt), [test script in Python](https://github.com/TianaQ/nlu-challenge/blob/master/test_ru.py)  
 
-##### Examples covered by localized grammar:  
+##### Examples covered by the localized grammar:  
 
 > включи radio head  
 > я хочу послушать paranoid android  
