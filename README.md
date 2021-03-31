@@ -10,7 +10,7 @@
 > can you put on paranoid android   
 > i want to listen to jazz music    
 > play me ummagumma by pink floyd   
-> we d like to hear let it be   
+> we'd like to hear let it be   
 > put on some rock   
 > could you play some classic please   
 
