@@ -29,12 +29,12 @@ The topic of speech recognition approaches is pretty new to me so my understandi
 > включи radio head  
 > я хочу послушать paranoid android  
 > поставь что-нибудь из джаза   
-> поставь пожалуйста какой-нибудь рок  
+> поставь пожалуйста что-то из рока 
 > мы хотим послушать джазовую музыку  
-> включи какую-нибудь рок музыку пожалуйста  
+> включи рок музыку пожалуйста  
 > поставь let it be битлз  
 > включи что-нибудь из битлов  
-> я хочу послушать умагуму пинк флойд  
+> я хочу послушать альбом уммагумма группы пинк флойд 
 > мы хотим послушать что-нибудь из группы cake  
 
 In this task I had to proceed with a lot of assumptions as I couldn't find an example of a JSGF file for Russian to use as a reference.  
@@ -44,3 +44,12 @@ In this task I had to proceed with a lot of assumptions as I couldn't find an ex
 4. Also I assumed that no preprocessing was applied to the input so possible word forms should be included in grammar rules for coverage.  
 
 If any of my assumptions are not correct, please, let me know. I’ll make corrections in accordance with limitations provided.  
+
+---
+
+### Update
+
+My initial approach to the challenge was from the recognition point of view so my grammars were aimed at correctly identifying a phrase, received as voice input, through the rules. 
+From the point of generation there is an issue of possible combinations. So, for example, not just a pattern `"<album> by <artist>"`, but a specific match of an album and the artist, that is the author. I'm not sure if it should be handled on the grammar level.  
+In Russian it also becomes necessary to build proper sequence of rules to handle word forms, for example gender, number and case for nouns together with the forms of corresponding adjectives and pronouns. It also may require splitting the enitities grouped by meaning (like `<genre>`) into subgroups based on gender ("рок, метал" - "классика, прилагательное + музыка" - "техно"). Also, one word name enitites from foreign languages may accuire grammar features in accordance with Russian grammar, and also native Russian names will be changing forms accordingly. I assume that some style guides may exist to better arrange such a grammar.  
+The only thing I didn't fully eliminated is the occasional "too many please" generations.  

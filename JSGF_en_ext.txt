@@ -23,7 +23,7 @@ public <music_play> =
 
 
 <musicIntent> = 
-	[i | we | i'd | we'd] (want | [would] like) to (listen [to]| hear);
+	(i | we) (want | ('d | would) like) to (listen to| hear);
 
 
 <musicObject> = [<album> by] <artist> | 
